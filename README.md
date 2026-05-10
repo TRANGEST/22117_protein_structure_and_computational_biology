@@ -103,6 +103,44 @@ python parse_results.py     # summary table of stability & binding
 python figure_groupBar.py   # grouped bar chart
 python figure_heatMap.py    # integrative summary heatmap
 ```
+### PyMOL Sessions
+
+The following PyMOL session files (.pse) can be opened directly in PyMOL to reproduce the figures.
+
+**figure1_alignment.pse** — Structural alignment of AF-P49902-F1-v6 onto 2JC9.
+Open in PyMOL to view the alignment with 2JC9 (gray), AlphaFold core (orange), and C-terminal region (magenta).
+
+Commands used to generate this session:
+
+```pymol
+reinitialize
+fetch 2JC9, async=0
+load AF.pdb
+align AF, 2JC9
+hide everything
+show cartoon
+color gray70, 2JC9
+color tv_orange, AF
+select AF_cterminal, AF and resi 401-561
+color magenta, AF_cterminal
+bg_color white
+set ray_opaque_background, on
+orient all
+```
+
+**figur2_plddt.pse** — AlphaFold model coloured by pLDDT confidence score.
+Open in PyMOL to view confidence map from red (low) to blue (high).
+
+Commands used to generate this session:
+
+```pymol
+reinitialize
+load AF.pdb
+spectrum b, red_yellow_cyan_blue, AF
+bg_color white
+set ray_opaque_background, on
+orient AF
+```
 
 ### Folder Structure
 
