@@ -163,6 +163,10 @@ nt5c2/
 ├── parse_results.py
 ├── figure_groupBar.py
 ├── figure_heatMap.py
+├── figur2_plddt.pse
+├── figure1_alignment.pse
+├── 2JC9_clean.pdb
+├── AF.pdb
 ├── requirements.txt
 ├── README.md
 └── data/
