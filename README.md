@@ -142,6 +142,20 @@ set ray_opaque_background, on
 orient AF
 ```
 
+### Structure Preparation
+
+**2JC9_clean.pdb** — Cleaned structure used for stability calculations.
+Water molecules, glycerol, sulfate ions, and adenosine removed. Magnesium ion retained.
+
+```pymol
+fetch 2JC9, async=0
+remove resn HOH
+remove resn GOL
+remove resn SO4
+remove resn ADN
+save 2JC9_clean.pdb
+```
+
 ### Folder Structure
 
 ```
